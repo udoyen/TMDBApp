@@ -20,9 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity : AppCompatActivity() {
 
     private val TAG : String = MainActivity::class.java.simpleName
-    val BASE_URL : String = "http://api.themoviedb.org/3/"
+    val BASE_URL : String = "https://api.themoviedb.org/3/"
     private var retrofit : Retrofit? = null
-    private var recyclerView : RecyclerView? = null
     private var API_KEY : String = "166873e095bdb281691220d5ad12610c"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,7 +59,8 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 val movies : List<Movie> = response.body()!!.results!!
-                recyclerView!!.adapter = MoviesAdapter(movies, R.layout.list_item_movie, applicationContext)
+
+                recycler_view!!.adapter = MoviesAdapter(movies, applicationContext)
                 Log.d(TAG, "Number of movies received: " + movies.size)
             }
         })

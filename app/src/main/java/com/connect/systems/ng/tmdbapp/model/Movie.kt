@@ -6,48 +6,48 @@ class Movie {
     // These fields represent the returned
     // fields from the json response
     @SerializedName("poster_path")
-    private var posterPath : String? = null
+    var posterPath : String? = null
 
     @SerializedName("adult")
-    private var adult : Boolean? = null
+    var adult : Boolean? = null
 
     @SerializedName("overview")
-    private var overview : String? = null
+    var overview : String? = null
 
     @SerializedName("release_date")
-    private var releaseDate : String? = null
+    var releaseDate : String? = null
 
 
     // Empty arraylist
     @SerializedName("genre_ids")
-    private var genreIds : ArrayList<Int>? = null
+    var genreIds : ArrayList<Int>? = null
 
     @SerializedName("id")
-    private var id : Int? = null
+    var id : Int? = null
 
     @SerializedName("originL_title")
-    private  var orginalTitle : String? = null
+    var orginalTitle : String? = null
 
     @SerializedName("original_language")
-    private var originalLanguage : String? = null
+    var originalLanguage : String? = null
 
     @SerializedName("title")
-    private var title : String? = null
+    var title : String? = null
 
     @SerializedName("backdrop_path")
-    private var backdropPath : String? = null
+    var backdropPath : String? = null
 
     @SerializedName("popularity")
-    private var popularity : Double? = null
+    var popularity : Double? = null
 
     @SerializedName("vote_count")
-    private  var voteCount : Int? = null
+    var voteCount : Int? = null
 
     @SerializedName("vote_average")
-    private var voteAverage : Double? = null
+    var voteAverage : Double? = null
 
     @SerializedName("video")
-    private var video : Boolean? = null
+    var video : Boolean? = null
 
     constructor(posterPath: String?, adult: Boolean?, overview: String?, releaseDate: String?, genreIds: ArrayList<Int>?, id: Int?,
         orginalTitle: String?, originalLanguage: String?, title: String?, backdropPath: String?, popularity: Double?, voteCount: Int?,
