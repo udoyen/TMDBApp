@@ -15,8 +15,8 @@ import com.squareup.picasso.Picasso
 class MoviesAdapter(movies: List<Movie>, applicationContext: Context?) :
     RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
 
-    var movies : List<Movie>? = null
-    var rowLayout : Int = R.layout.list_item_movie
+    private var movies : List<Movie>? = null
+    private var rowLayout : Int = R.layout.list_item_movie
     var context : Context? = null
     private val IMAGE_URL_BASE_PATH = "https://image.tmdb.org/t/p/w342//"
 
